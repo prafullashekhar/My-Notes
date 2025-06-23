@@ -1,0 +1,10 @@
+{
+    "/": {
+        "title": "DFS",
+        "text": "DFS DFS Initialisizing the adj matrix, and vis[i] will denote in which component it is lying if it is not equal to 0, and if it is 0, then that node is not visited. Use of Stack or Recursion C++ // Some code \n vector < vector <int>>  adj; \n vector <int>  vis; \n \n void  dfs ( int  node ,  int  comp ){ \n     vis[node] = comp; \n     for ( auto  v:adj[node]){ \n         if ( ! vis[v])  dfs (v, comp); \n     } \n } \n \n int  main (){ \n     int  n, m; cin >> n >> m; \n     adj. resize (n + 1 )  // resize it to n if vertex number start from 0 \n     vis. assign (n + 1 ,  0 )  // assign function will resign the array and assigns value to each \n      \n     for ( int  i = 0 ; i < m; i ++ ){ \n         int  u, v; cin >> u >> v; \n         adj[u]. push_back (v); \n         adj[v]. push_back (u); \n     } \n      \n     int  comp_cnt  =  0 ; \n     // this is done to check for each component \n     for ( int  i = 1 ; i <= n; i ++ ){ \n         if ( ! vis[i]){ \n             comp_cnt ++ ; \n             dfs (i, comp_cnt); \n         } \n     } \n }"
+    },
+    "/documentation/bfs/": {
+        "title": "BFS",
+        "text": "BFS Is used to find the shorted path  Use of Queue make the visited as true on adding the node to queue only, so that each node will be added in the queue only once. C++ int  main (){ \n     int  x  =  56 ; \n \n }"
+    }
+}
